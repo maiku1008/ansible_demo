@@ -1,0 +1,8 @@
+# Ansible Demo Playbook for Realz!
+---
+- hosts: local
+  tasks:
+    - name: Update Debian
+      become: true
+      apt:
+        upgrade: yes

@@ -1,0 +1,7 @@
+# Ansible Demo Playboook!
+---
+- hosts: local
+  tasks:
+    - name: Say Hello
+      debug:
+        msg: "Hello, {{ message | default('World!') }}"
