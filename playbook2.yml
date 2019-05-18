@@ -5,4 +5,22 @@
     - name: Update Debian
       become: true
       apt:
-        upgrade: yes
+        upgrade: dist
+
+    - name: Install packages
+      become: true
+      apt:
+        package: "{{ item }}"
+        state: present
+      with_items:
+        - nginx
+        - curl
+        - htop
+
+    - name: Change nginx template
+      become: true
+      lineinfile:
+        path: /var/www/html/index.nginx-debian.html
+        regexp: '^<h1>'
+        line: <h1>{{ message | default('Hello, World!') }}</h1>
+        state: present

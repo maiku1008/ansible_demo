@@ -4,4 +4,4 @@
   tasks:
     - name: Say Hello
       debug:
-        msg: "Hello, {{ message | default('World!') }}"
+        msg: "{{ message | default('Hello, World!') }}"
