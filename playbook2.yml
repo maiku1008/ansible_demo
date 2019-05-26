@@ -2,10 +2,10 @@
 ---
 - hosts: local
   tasks:
-    - name: Update Debian
-      become: true
-      apt:
-        upgrade: dist
+    # - name: Update Debian
+    #   become: true
+    #   apt:
+    #     upgrade: dist
 
     - name: Install packages
       become: true
