@@ -1,0 +1,7 @@
+---
+# tasks file for create_user
+- name: Create user Pippo
+  user:
+    name: pippo
+    shell: /bin/bash
+    append: yes
