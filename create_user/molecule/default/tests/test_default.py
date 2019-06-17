@@ -21,4 +21,4 @@ def test_group(host):
 def test_file(host):
     f = host.file('/tmp/pippo')
 
-    assert not f.exists
+    assert f.exists
